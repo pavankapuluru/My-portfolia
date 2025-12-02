@@ -15,17 +15,6 @@ const Contact: React.FC = () => {
     message: "",
   });
 
-  //   const handleChange = (
-  //     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  //   ) => {
-  //     setForm({ ...form, [e.target.name]: e.target.value });
-  //   };
-
-  //   const handleSubmit = (e: React.FormEvent) => {
-  //     e.preventDefault();
-  //     console.log("Form Submitted:", form);
-  //   };
-
   return (
     <Box sx={{ padding: "40px", maxWidth: "600px", margin: "auto" }}>
       <Typography
@@ -39,22 +28,13 @@ const Contact: React.FC = () => {
         <form>
           <Stack spacing={3}>
             {/* Name */}
-            <TextField
-              fullWidth
-              label="Your Name"
-              name="name"
-              //   value={form.name}
-              //   onChange={handleChange}
-              required
-            />
+            <TextField fullWidth label="Your Name" name="name" required />
 
             {/* Email */}
             <TextField
               fullWidth
               label="Your Email"
               name="email"
-              //   value={form.email}
-              //   onChange={handleChange}
               type="email"
               required
             />
@@ -64,8 +44,6 @@ const Contact: React.FC = () => {
               fullWidth
               label="Message"
               name="message"
-              //   value={form.message}
-              //   onChange={handleChange}
               multiline
               rows={5}
               required
